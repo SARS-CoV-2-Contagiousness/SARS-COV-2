@@ -37,7 +37,7 @@ E484K mutations, using k-mean and expectation maximization algorithms to reveal 
 pattern in the information listed above,
 * Evaluation of mutations in the same class within the framework of the interaction between
 SARS-CoV-2 and ACE2.
-## Sonuçlar
+## Results
 Within the scope of the project, we obtained the mutation-induced S-protein stability and
 ACE2 binding change experimental data from Starr et al. This dataset includes 4221 S-protein
 mutations. Using our self-written python code, we extracted 586 experimental mutation data
