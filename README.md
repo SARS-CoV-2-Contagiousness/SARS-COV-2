@@ -58,38 +58,31 @@ have tried, through the Weka program, which is widely used for machine learning.
 of all analysis results of the K-mean and Expectation Maximization Algorithms within the
 scope of the project are given in the ANNEX-1.
 ### Results of the K-means clustering algorithm
-| NNumber of Cluster | Cluster number where the E484K mutation is found |The cluster
-number where the
-N501Y mutation is
-located| E484K'nin bulunduğu cluster'daki eleman sayısı | N501Y'nin bulunduğu cluster'daki eleman sayısı |Number of
-elements in the set
-with the N501Y
-mutation
-|----------------|-----------------------------|-----------------------------|------------------------------------------------|------------------------------------------------|
-| 2              | 1                           | 1                           | 445                                            | 445                                            |
-| 3              | 1                           | 1                           | 299                                            | 299                                            |
-| 4              | 3                           | 3                           | 164                                            | 164                                            |
-| 5              | 3                           | 3                           | 164                                            | 164                                            |
-| 6              | 5                           | 3                           | 118                                            | 66                                             |
-| 7              | 5                           | 3                           | 119                                            | 65                                             |
-| 8              | 1                           | 1                           | 57                                             | 57                                             |
-| 9              | 8                           | 8                           | 56                                             | 56                                             |
-| 10             | 9                           | 9                           | 30                                             | 30                                             |
-| 11             | 9                           | 9                           | 30                                             | 30                                             |
-| 12             | 9                           | 9                           | 29                                             | 29                                             |
-
-## Kullandığımız Dosyalar
-### [Deneysel Veriseti](https://github.com/BiyoinformatikProje/Bulasiciligi-Arttiran-Koronavirus-SARS-CoV-2-Mutasyonlarinin-Tahmini/blob/main/Deneysel_veriseti.csv)
-SARS-CoV-2’nin S-proteininindeki Hedef Tanıma Modülü (HTM) bölgesindeki olası tüm nokta mutasyonların ACE2 proteinine bağlanması üzerindeki etkilerini gösteren deneysel veriseti.
-### [Özellikler](https://github.com/BiyoinformatikProje/Bulasiciligi-Arttiran-Koronavirus-SARS-CoV-2-Mutasyonlarinin-Tahmini/blob/main/Ozellikler.csv)
-Her bir aminoaside ait hidropati indeksi ve moleküler kütleyi gösteren veriseti. Kullandığımız verisetlerini oluştururken buradaki özelliklerden yararlandık.
-### [veriduzenleme.py](https://github.com/BiyoinformatikProje/Bulasiciligi-Arttiran-Koronavirus-SARS-CoV-2-Mutasyonlarinin-Tahmini/blob/main/veriduzenleme.py)
-Varolan bazı verisetlerinden aldığımız veriyi bu kodla birleştirip ve düzenleyip verisetlerimizi oluşturduk.
-### [Veriseti](https://github.com/BiyoinformatikProje/Bulasiciligi-Arttiran-Koronavirus-SARS-CoV-2-Mutasyonlarinin-Tahmini/blob/main/veriseti.csv)
-Kodumuzdaki veriyial() fonksiyonu ile oluşturduğumuz, hedef tanıma modülü'ndeki bütün mutasyonları ve bu mutasyonların hidropati farkı, moleküler kütle farkı, bağlanma ortalaması, ekspresyon ortalaması, polarite farkı ve hacim farkı özelliklerini bulunduran veriseti. Farkları hesaplarken mutant aminoaside ait olan özelliği vahşitip aminoasidinden çıkardık.
-### [Veriseti Bağlanma Sıfır ve Üstü](https://github.com/BiyoinformatikProje/Bulasiciligi-Arttiran-Koronavirus-SARS-CoV-2-Mutasyonlarinin-Tahmini/blob/main/veriseti_baglanma_sifir_ve_ustu)
-[veriseti](https://github.com/BiyoinformatikProje/Bulasiciligi-Arttiran-Koronavirus-SARS-CoV-2-Mutasyonlarinin-Tahmini/blob/main/veriseti.csv) dosyasındaki bağlanma afinitesi (bind_avg) değeri sıfıra eşit veya sıfırdan büyük olan mutasyonları içermektedir. Bu verisetini oluşturmak için kodumuzdaki baglanmasifirveustu() fonksiyonu ile bağlanma değeri sıfıra eşit olan veya sıfırdan büyük olan mutasyonları seçtik.
-### [Veriseti Yeni Özellikler](https://github.com/BiyoinformatikProje/Bulasiciligi-Arttiran-Koronavirus-SARS-CoV-2-Mutasyonlarinin-Tahmini/blob/main/veriseti_yeni_ozellikler) 
-[veriseti](https://github.com/BiyoinformatikProje/Bulasiciligi-Arttiran-Koronavirus-SARS-CoV-2-Mutasyonlarinin-Tahmini/blob/main/veriseti.csv) dosyasına kodumuzdaki yeniozellikekle() fonksiyonuyla halka sayısı farkı, hidrojen atomu sayısı farkı, oksijen atomu sayısı farkı, çift bağ sayısı farkı özelliklerini ekledik.
-### [Veriseti Yeni Özellikler Bağlanma Sıfır ve Üstü](https://github.com/BiyoinformatikProje/Bulasiciligi-Arttiran-Koronavirus-SARS-CoV-2-Mutasyonlarinin-Tahmini/blob/main/Veriseti_Yeni_Ozellikler_Baglanma_Sifir_ve_Ustu.csv)
-[Veriseti Yeni Özellikler](https://github.com/BiyoinformatikProje/Bulasiciligi-Arttiran-Koronavirus-SARS-CoV-2-Mutasyonlarinin-Tahmini/blob/main/veriseti_yeni_ozellikler) dosyasındaki bağlanma değeri (bind_avg) sıfır ve üstü olan mutasyonları seçtiğimiz veriseti. Bu verisetini oluşturmak için baglanmasıfırveustu() fonksiyonunu kullandık.
+| Number of Cluster | Cluster number where the E484K mutation is found | The cluster number where the N501Y mutation is located | The number of elements in the set with the E484K mutation | Number of elements in the set with the N501Y mutation |
+|-------------------|--------------------------------------------------|--------------------------------------------------------|-----------------------------------------------------------|-------------------------------------------------------|
+| 2                 | 1                                                | 1                                                      | 445                                                       | 445                                                   |
+| 3                 | 1                                                | 1                                                      | 299                                                       | 299                                                   |
+| 4                 | 3                                                | 3                                                      | 164                                                       | 164                                                   |
+| 5                 | 3                                                | 3                                                      | 164                                                       | 164                                                   |
+| 6                 | 5                                                | 3                                                      | 118                                                       | 66                                                    |
+| 7                 | 5                                                | 3                                                      | 119                                                       | 65                                                    |
+| 8                 | 1                                                | 1                                                      | 57                                                        | 57                                                    |
+| 9                 | 8                                                | 8                                                      | 56                                                        | 56                                                    |
+| 10                | 9                                                | 9                                                      | 30                                                        | 30                                                    |
+| 11                | 9                                                | 9                                                      | 30                                                        | 30                                                    |
+| 12                | 9                                                | 9                                                      | 29                                                        | 29                                                    |
+## Files We Used
+### [Experimental Dataset](https://github.com/BiyoinformatikProje/Prediction-of-SARS-CoV-2-Mutations-that-Increase-Contagiousness/blob/main/Experimental%20Dataset.csv)
+Experimental dataset showing the effects of all possible point mutations in the Target Recognition Module (HTM) region of the S-protein of SARS-CoV-2 on ACE2 protein binding.
+### [Features](https://github.com/BiyoinformatikProje/Prediction-of-SARS-CoV-2-Mutations-that-Increase-Contagiousness/blob/main/Features.csv)
+Dataset showing the hydropathy index and molecular mass of each amino acid. While creating the datasets we use, we made use of the features here.
+### [editdata.py](https://github.com/BiyoinformatikProje/Prediction-of-SARS-CoV-2-Mutations-that-Increase-Contagiousness/blob/main/editdata.py)
+We created our datasets by combining the data we received from some existing datasets with this code and arranging them.
+### [Dataset](https://github.com/BiyoinformatikProje/Prediction-of-SARS-CoV-2-Mutations-that-Increase-Contagiousness/blob/main/dataset.csv)
+The dataset we have created with the getdata() function in our code, which contains all the mutations in the target recognition module and the properties of hydropathy difference, molecular mass difference, binding mean, expression average, polarity difference and volume difference of these mutations. While calculating the differences, we  subtracted the property belonging to the mutant amino acid from the wildtype.
+### [Dataset Bind Zero And Up](https://github.com/BiyoinformatikProje/Prediction-of-SARS-CoV-2-Mutations-that-Increase-Contagiousness/blob/main/dataset_bind_0_and_up)
+It contains mutations with a binding affinity (bind_avg) value in the dataset file equal to or greater than zero. To generate this dataset, we selected the mutations with the linking value equal to or greater than zero with the function linkmasifirveustu () in our code.
+### [Dataset New Features](https://github.com/BiyoinformatikProje/Prediction-of-SARS-CoV-2-Mutations-that-Increase-Contagiousness/blob/main/dataset_new_features) 
+With the addnewfeatures() function in our code, we added the ring number difference, hydrogen atom number difference, oxygen atom number difference, double bond number difference to the dataset file.
+### [Dataset_New_Features_Binding_Zero_And_Up](https://github.com/BiyoinformatikProje/Prediction-of-SARS-CoV-2-Mutations-that-Increase-Contagiousness/blob/main/Dataset_New_Features_Binding_Zero_And_Up.csv) 
+The dataset where we select mutations with a binding value (bind_avg) of zero and above in the dataset new features file. We used the bind0andup() and addnewfeatures() functions to create this dataset.
