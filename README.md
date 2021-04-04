@@ -1,22 +1,70 @@
-# Bulaşıcılığı Arttıran Koronavirüs SARS CoV2 Mutasyonlarının Tahmini
-## Özet
-2019 yılında ortaya çıkan ve 223 ülkeyi etkisi altında alan COVID-19 pandemisi, günümüze (Şubat 2021) kadar 110 milyon vakaya ve 2.5 milyon ölüme sebep olmuştur (WHO, 2021). COVID-19 pandemisi, SARS-CoV-2 virüsünün ve bu virüse avantaj sağlayan varyantlarının hızla yayılması sonucunda bu bulaşıcılık seviyesine erişmiştir. Bahsi geçen avantaj sağlayıcı varyantlar, özellikle tek amino asit (nokta) bazında görülen mutasyonlar yoluyla meydana gelmiştir. Bu nokta mutasyonları, SARS-CoV-2’nin yapısında değişikliklere yol açabildiği gibi, virüsün insan konağına girmek için ilk basamak olarak kullandığı ACE2 proteini ile etkileşim verimini de etkileyebilmektedir. ACE2 ile bağlanmayı etkileyen N501Y ve E484K mutasyonları yaygın olarak İngiltere’de, Güney Afrika’da ve Brezilya’da gözlemlenmiş ve tüm dünyada endişeye sebep olmuştur. Bu olgudan yola çıkarak tasarladığımız projede, N501Y ve E484K kadar etkin olabilecek ve bulaşıcılığının yüksek olması nedeniyle tehlike yaratabilecek SARS-CoV-2 mutasyonlarının tahmin edilmesi amaçlandı. Bu hedef doğrultusunda, özgün bir çalışma olarak, SARS-CoV-2 ve ACE2 bağlanma ve stabilitesine ait deneysel veriler farklı aminoasit özellikleri ile ilişkilendirilip, makine öğrenmesi ve hesaplamalı biyoloji tekniklerine entegre ederek, algoritmalarda yapılan analizler sonucunda _**N501M, Q414A, N354K, Q498H, N460K, N501W**_ mutasyonlarının, koronavirüsünün yayılmasında tehlikeli olma ihtimallerinin yüksek olduğu belirlendi. Şu anda yaygın olan varyantlardan birinde görülen 501. pozisyon mutasyonlarına özellikle dikkat edilmesi gerektiğini, bu pozisyonunun listelerde tekrar etmesi üzerine özellikle önermekteyiz. Özellikle sekanslama sırasında karşılaşılması durumunda bu mutasyonların yayılımının engellenmesi konusunda büyük hassasiyet gösterilmeli ve gerekli sağlık tedbirleri alınmalıdır. Makine öğrenmesi ve hesaplamalı biyoloji ışığında yapılan bu araştırmanın sonuçları COVID-19 pandemisi konusunda ileriki çalışmalara alt yapı sağlayacak ve virüsle olan savaşta bilim insanlarına yol gösterecektir. 
+# Prediction-of-SARS-CoV-2-Mutations-that-Increase-Contagiousness 
+## Abstract
+The COVID-19 pandemic, which emerged in 2019 and affected 223 countries, has caused
+110 million cases and 2.5 million deaths until today (February 2020) (WHO, 2021). The
+COVID-19 pandemic has reached this level of contagion as a result of the rapid spread of the
+SARS-CoV-2 virus and its advantageous variants. The aforementioned advantageous variants
+have occurred mainly through mutations seen on a single amino acid (dot) basis. These point
+mutations may cause changes in the structure of SARS-CoV-2, as well as affect the efficiency
+of interaction with the ACE2 protein, which the virus uses as the first step to enter the human
+host. N501Y and E484K mutations that affect binding with ACE2 have been widely observed
+in the UK, South Africa and Brazil since the beginning of 2020, and have caused concern all
+over the world. In the project we designed based on this phenomenon, it was aimed to predict
+the SARS-CoV-2 mutations that could be as effective as N501Y and E484K and could pose a
+danger due to their high contagiousness. In line with this goal, as an original study,
+experimental data on SARS-CoV-2 and ACE2 binding and stability were associated with
+different amino acid properties, integrated into machine learning and computational biology
+techniques, and analyzed in algorithms as a result of N501M, Q414A, N354K, Q498H,
+N460K. It was determined that the N501W mutations are likely to have dangerous effects on
+the spread of the coronavirus. We particularly suggest that particular attention should be paid
+to the 501st position mutation, which is seen in one of the currently common variants, since
+this position is repeatedly found in the lists. If these mutations are encountered during
+sequencing, great sensitivity should be shown to prevent the spread of these mutations and
+necessary health measures should be taken. The results of this research, conducted in the light
+of machine learning and computational biology, will provide the infrastructure for future
+studies on the COVID-19 pandemic and guide scientists in the fight against the virus.
 
-## Amaç
-Projemiz kapsamında, hangi SARS-CoV-2 mutasyonlarının virüsün bulaşıcılığını arttıracağını, makine öğrenmesi ve hesaplamalı biyoloji teknikleri kullanarak tahmin etmeyi amaçladık. Bu amaç doğrultusunda sırasıyla şu basamakları takip ettik:
- * SARS-CoV-2 ile hedef proteini ACE2 arasındaki etkileşimini etkileyen mutasyon bilgilerinin literatürden toplanması,
- * SARS-CoV-2 mutasyonlarının etkisini biyokimyasal olarak karakterize edecek amino asit değişim özelliklerinin literatürden elde edilmesi ve işlenmesi,
- * İstelenen bilgilerdeki örüntüyü ortaya çıkartmak için k-ortalama ve beklenti maksimizasyonu algoritmalarını kullanarak, hangi SARS-CoV-2 mutasyonlarının N501Y ve E484K mutasyonlarıyla benzer etkiye sahip olabileceğinin araştırılması,
- * Aynı sınıfta olan mutasyonların SARS-CoV-2 ile ACE2 etkileşimi çerçevesinde değerlendirilmesi.
-
+## Aim of the project
+Within the scope of our project, we aimed to predict which SARS-CoV-2 mutations will
+increase the infectiousness of the virus by using machine learning and computational biology
+techniques. For this purpose, we followed the steps below:
+* Collecting information on mutations affecting the interaction between SARS-CoV-2 and
+its target protein ACE2 from the literature,
+* Obtaining and processing amino acid change properties that will biochemically
+characterize the effect of SARS-CoV-2 mutations from the literature,
+* To investigate which SARS-CoV-2 mutations may have the same effect as N501Y and
+E484K mutations, using k-mean and expectation maximization algorithms to reveal the
+pattern in the information listed above,
+* Evaluation of mutations in the same class within the framework of the interaction between
+SARS-CoV-2 and ACE2.
 ## Sonuçlar
-Mutasyon kaynaklı S-protein stabilite ve ACE2’ye bağlanma değişimi deney verileri literatürden sağlanarak kendi yazdığımız python kodunu ile bu veri setinin içinde, S-proteinin ACE2’ye daha iyi bağlanmasını sağlayan veya bağlanmasını olumsuz etkilemeyen 586 deneysel mutasyon verisini ayıklandı. Daha sonra, bu mutasyonlarda etkili aminoasit özellikleri olan Hidropati, Polarite, Hacim, Moleküler Ağırlık, Aminoasit Yapısındaki Halka Sayısı, Oksijen Sayısı, Hidrojen Sayısı ve Çift Bağ Sayısı Değişimi cinsinden kodlandı ve deney verileri ile ilişkilendirildi. 586 adet mutasyon içeren ve N501Y ile E484K verilerini kapsayan bu set, iki farklı makine öğrenmesi gruplama algoritmasına tanıtıldı. Bundan sonra, farklı grup (küme) sayıları için, hangi mutasyonların N501Y ve E484K mutasyonları ile aynı kümeye düşeceği araştırıldı. Bu amaç kapsamında makine öğrenmesi için yaygın olarak kullanılan Weka programı aracılığıyla, denediğimiz tüm kümeleme algoritmaları içinden en tutarlı sonuçları veren K-ortalama (k-means) kümeleme ve EM (Expectation Maximization) algoritmalarını kullanıldı. Bu kapsamda yapılan analizler sonucunda;
-* K-ortalama kümeleme algoritması ile yapılan analizler sonucunda k=10 için hesaplanan 30 elemanlı 9. kümeye bakıldığında, stabilitesi en yüksek ilk beş mutasyon **N501M, Q414A, Q498H, N460K, N501W** (stabilitesi en çoktan en aza göre sıralanmıştır) olarak belirlendi. Bu mutasyonlar, K-ortalama kümeleme tarafından önerilen en tehlikeli beş mutasyon olarak belirlendi. Bu mutasyonlarda 501 pozisyonunun iki kere listelenmiş olması bu pozisyonda meydana gelebilecek mutasyonlar konusunda dikkatli olunması gerektiğini göstermektedir.
-* Beklenti maksimizasyonu kümeleme algoritması ile yapılan analizler sonucunda k=10 için hesaplanan 46 elemanlı 8. kümeye bakıldığında, stabilitesi en yüksek ilk beş mutasyon N501M, N354K, Q498H, N460K, N501W (stabilitesi en çoktan en aza göre sıralanmıştır) olarak belirlendi. Yine bu algoritmada da 501 pozisyonuna ait aynı mutasyonlar en tehlikeli beş mutasyon listesinde seçildi.
-* Her iki algoritmadan elde edilen kümelerin analizi sonucunda çıkan en tehlikeli beş mutasyon listesinde ortak mutasyonların olduğu görülmektedir. Bu ortak mutasyonların da değerlendirilmesi ile uzlaşmalı olarak **N501M, Q414A, N354K, Q498H, N460K, N501W** altı adet mutasyonun, koronavirüsünün yayılmasında tehlikeli etkileri olma ihtimali yüksek mutasyonlar olarak belirlendi. 
-* Şu anda yaygın olan varyantlardan birinde görülen 501. pozisyon mutasyonuna özellikle dikkat edilmesi gerektiğini, bu listede 501 pozisyonunun tekrar etmesi üzerine özellikle önermekteyiz.
-### K-means kümeleme algoritmasının sonuçları
-| Cluster Sayısı | E484K'nin bulunduğu cluster | N501Y'nin bulunduğu cluster | E484K'nin bulunduğu cluster'daki eleman sayısı | N501Y'nin bulunduğu cluster'daki eleman sayısı |
+Within the scope of the project, we obtained the mutation-induced S-protein stability and
+ACE2 binding change experimental data from Starr et al. This dataset includes 4221 S-protein
+mutations. Using our self-written python code, we extracted 586 experimental mutation data
+within this dataset that allowed or did not affect the S-protein binding to ACE2 better. We
+then encoded these mutations in terms of also Hydropathy, Polarity, Volume, Molecular
+weight, ring number in amino acid structure, oxygen number, hydrogen number and double
+bond number changes and correlated them with our experimental data. Our dataset and all
+pyton codes created in this way can be accessed from the link
+https://github.com/BiyoinformatikProje/Bulasiciligi-Arttiran-Koronavirus-SARS-CoV-2-
+Mutations . This set, which contains 586 mutations and includes N501Y and E484K data, was
+introduced to two different machine learning grouping algorithms. Next, for different group
+(cluster) numbers, it was investigated which mutations would fall into the same cluster with
+the N501Y and E484K mutations. Our goal here was to remove dangerous SARS-CoV-2
+mutations that could cause changes similar to the N501Y and E484K mutations. For this
+purpose, we used K-means (k-means) clustering and EM (Expectation Maximization)
+algorithms, which give the most consistent results among all the clustering algorithms we
+have tried, through the Weka program, which is widely used for machine learning. The files
+of all analysis results of the K-mean and Expectation Maximization Algorithms within the
+scope of the project are given in the ANNEX-1.
+### Results of the K-means clustering algorithm
+| NNumber of Cluster | Cluster number where the E484K mutation is found |The cluster
+number where the
+N501Y mutation is
+located| E484K'nin bulunduğu cluster'daki eleman sayısı | N501Y'nin bulunduğu cluster'daki eleman sayısı |Number of
+elements in the set
+with the N501Y
+mutation
 |----------------|-----------------------------|-----------------------------|------------------------------------------------|------------------------------------------------|
 | 2              | 1                           | 1                           | 445                                            | 445                                            |
 | 3              | 1                           | 1                           | 299                                            | 299                                            |
